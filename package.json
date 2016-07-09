@@ -1,0 +1,11 @@
+{
+  "name": "sketch.js",
+  "devDependencies": {
+    "coffee-script": "latest",
+    "uglify": "latest"
+  },
+  "scripts": {
+    "build": "coffee -co lib/ src/; uglify -s lib/sketch.js -o lib/sketch.min.js",
+    "test": "coffee -co test/ test/"
+  }
+}

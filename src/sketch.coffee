@@ -155,12 +155,12 @@
     # actions that have been stored as well as the action in progress if it has
     # something renderable.
     redraw: ->
-      @el.width = @canvas.width()
+      #@el.width = @canvas.width()
       @context = @el.getContext '2d'
       sketch = this
-      $.each @actions, ->
-        if this.tool
-          $.sketch.tools[this.tool].draw.call sketch, this
+      #$.each @actions, ->
+      #  if this.tool
+      #    $.sketch.tools[this.tool].draw.call sketch, this
       $.sketch.tools[@action.tool].draw.call sketch, @action if @painting && @action
 
   # # Tools
